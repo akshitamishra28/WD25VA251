@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements in JS</title>
+</head>
+<body>
+    <script>
+        // if else
+        let age = 5;
+        if(age>=18){
+            console.log("valid for vote");
+        }
+        else{
+            console.log("not valid for vote");
+        }
+        let a = 23;
+        if(a>=18){
+            console.log("valid for vote");
+        }
+        else{
+            console.log("not valid for vote");
+        }
+
+        let grade = "A";
+        switch(grade){
+            case 'A': result="first position";
+            break;
+            case 'B': result="second position";
+            break;
+            case 'C': result="third position";
+            break;
+            default: result = "fail";
+        }
+        console.log(result);
+        // if else if else
+        let marks = 45;
+        if(marks>60){
+            console.log("first div marks");
+
+        }
+        else if(marks<60 && marks>=40){
+            console.log("sec div marks");
+        }
+        else if(marks<40 && marks>=30){
+            console.log("third div marks");
+        }
+        else{
+            console.log("fail");
+        }
+
+        let mark = [maths=95, sst=93, science=90,IT=96];
+        console.log(mark);
+        for(let i=0; i<mark.length; i++){
+            let sum = 0;
+            sum+= i;
+            console.log(sum);
+        }
+        
+    </script>
+    
+</body>
+</html>

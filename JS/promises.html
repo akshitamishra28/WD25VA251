@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (function(a,b){
+            console.log(`first parameter ${a} and second parameter $(b)`);
+            var res = a+b;
+            console.log(`Result is $(res) `);
+        }) (4,5);
+
+        //promises
+        let promise=new Promise(function(resolve ,reject){
+            let age=5;
+            if(age>=18){
+                resolve("valid age");
+            }
+            else{
+                reject("wait for next year")
+            }
+        });
+        promise.then(msg=>console.log(msg))
+        .catch(error=>console.log (error));
+        // console.log (promise)
+        promise.then(msg=>console.log(msg)).catch(error=>console.log(error));
+        // 
+
+        async function userData() {
+            let response=await fetch('https://dummyjson.com/products');
+            let responseData=await response.json();
+            console.log(responseData);
+
+        }
+        userData();
+        let myInfo={
+            name: "Akshita Mishra",
+            age: 23,
+            mob: 28323198132,
+            email: "akshita@gmail.com"
+        }
+        //convert the object into JSON string
+
+        let myInfoData=JSON.stringify(myInfo);
+
+        //set data
+        localStorage.setItem('preference' , myInfoData);
+        let getMyInfoloData=localStorage.getItem('preference');
+        //parse 
+        const finalData=JSON.parse(getMyInfoloData);
+        console.log(finalData.name);
+
+        let num=[2,4,5,6,7];
+        let result = num.map(n=>n*n);
+        console.log(`square of num is $(result)`);
+
+        let result2 = num.filter(n=n>3);
+        console.log(`sorting of num array is $(result2)`);
+        let sum=num.reduce((total,n)=>total + n);
+        console.log(`Addition of num array elements is $(sum)`);
+
+        let double=num.forEach(n=>n*2);
+        
+
+
+        
+
+
+    </script>
+</body>
+</html>

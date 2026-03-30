@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function 
+        function demo(text){
+            console.log("hello "+  text);
+        }
+        demo("js");
+        function add(a,b=10){
+            console.log("addition of a and b " + (a+b));
+        }
+        add(5);
+
+        //anonymous function 
+        let cal=function(){
+            var num1 = 15;
+            var num2 = 20;
+            console.log("multiply of num1 and num2 is " + (num1*num2));
+        }
+        cal();
+        // arrow function
+        let div=(x,y)=>{
+            var num1 = x;
+            var num2 = y;
+            var num3 = x/y;
+            console.log("division is " + num3);
+        }
+        div(12,3);
+        // arrow function with single line element
+        let msg=()=>console.log("hello abes");
+        msg();
+        // callback function
+        function sub() {
+            var num1 = 10;
+            var num2 = 20;
+            var res = num1 - num2;
+        }
+        function displayres(res) {
+            console.log("result is " + res);
+        }
+        sub(displayres);
+        function msg1(){
+            console.log("hello ")
+        }
+        (function(a,b){
+            console.log(`first parameter ${a} and second parameter $(b)`);
+            var res = a+b;
+            console.log(`Result is $(res) `);
+        }) (4,5);
+    </script>
+</body>
+</html>

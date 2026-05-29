@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //primitive - single value(immutable)
+        // string // number // bool // null // undefined // symbol // BigInt
+        let name = "akshita";
+        console.log(name);
+        console.log(typeof(name));
+        let age=23;
+        let ismarried = false;
+        let address = null;
+        let education;
+        console.log(ismarried);
+        console.log(typeof(ismarried));
+        //bigint
+        let salary = BigInt(98978979);
+        console.log(salary);
+        //symbol
+        let name1= Symbol("gauri");
+        let name2 =Symbol("gauri");
+        console.log(name1==name2);
+        //non primitive /reference /object / mutable values(can be change )
+       // object // array // function
+       //object :- an object is a collection of its keys(properties) and values.
+       let student = { name: "Rudra" ,
+       age: 10,
+       ismarried : false,
+       address: {
+        streetNo : 23,
+        area: "indirapuram",
+        city: "gzb"
+
+
+       },
+       course: "btech",
+       branch : "cse",
+       year: 2025,
+       //function
+       getInfo:function(){ 
+        return "My Education is " + student.branch + " " + student.course + " and year is " + student.year;
+       }
+
+       };
+       console.log(student);
+       //acess object's keys/property
+       //using dot notation
+       console.log(student.name + " " +  student.age + " " + student.address);
+       console.log(typeof(student));
+       console.log(student.getInfo());
+       // find object's property in object
+       console.log(delete name.student);
+       console.log(student);
+       console.log("name" in student);
+       // acess object'key using brackets
+       console.log(student["ismarried"]);
+    </script>
+    
+</body>
+</html>

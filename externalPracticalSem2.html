@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <head>
+        <link rel="stylesheet" href="externalPracticalSem2.css">
+    
+
+<button onclick="calculateGrade()">Calculate Grade</button>
+
+<p id="result"></p>
+
+<script>
+function calculateGrade()
+{
+    let n = Number(prompt("Enter number of subjects"));
+    let total = 0;
+
+    for(let i=1; i<=n; i++)
+    {
+        let marks = Number(prompt("Enter marks of subject " + i));
+        total = total + marks;
+    }
+
+    let avg = total / n;
+    let grade;
+
+    if(avg >= 90)
+        grade = "A";
+    else if(avg >= 75)
+        grade = "B";
+    else if(avg >= 60)
+        grade = "C";
+    else
+        grade = "Fail";
+
+    let output = "Total = " + total +
+                 "<br>Average = " + avg +
+                 "<br>Grade = " + grade;
+
+    document.getElementById("result").innerHTML = output;
+}
+</script>
+</head>
+</body>
+</html>
